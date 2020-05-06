@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="google-site-verification" content="IIp4kfUCXt-rw1sxw5IoGUdeKOjUIwAY7VqsY4nHUUU" />
+    <title>Touch Assembly Application</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag asset_path('ta_low.jpg') %>
+  </head>
+
+  <body>
+    <div id="content">
+      <h1>Touch Assembly Custom Application</h1>
+         <% unless flash[:notice].blank? %>
+         <div id= "notification">
+           <%=flash[:notice]%>
+         </div>
+         <% end %>
+    <%= yield %>
+    </div>
+  </body>
+</html>

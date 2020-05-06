@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @places.name %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @places.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @places.longitude %>
+</p>
+
+<p>
+<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&markers=size:small%7Ccolor:red%7C#{@place.latitude},#{@place.longitude}&key=AIzaSyBzF1e57EM_lOik2twidTEWGIy0I6kS8u8", alt: "Map" %>
+</p>
+<%= link_to 'Edit', edit_place_path(@place) %> |
+<%= link_to 'Back', places_path %>

@@ -1,0 +1,15 @@
+<h1>Story Index page</h1>
+<p>Here you will find a forum for discussing life hack's and sustainable living tips.  Please be respectful and mindful of other opinions.  These forums are moderated.</p>
+<br>
+Random name:link pair from database:
+<%= link_to @story.link, @story.name %>
+<br>
+<br>
+Random name:link pair with html code: 
+<a href="<%= @story.link %>"><%= @story.name %> </a>
+<br>
+<br>
+<br>
+<br>
+<br>
+Last refresh at (GMT time):  <%= @current_time %>
