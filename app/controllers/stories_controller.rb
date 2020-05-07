@@ -2,6 +2,7 @@ class StoriesController < ApplicationController
   def index
     @story = Story.order('RANDOM()').first
     @current_time = Time.now
+    @stories = Story.all #added by GV to test for story index page 
   end
   def new 
     @story = Story.new
@@ -16,7 +17,11 @@ class StoriesController < ApplicationController
     end
   end  
   
-  private
+  def show
+    @story = Story.find(params[:id])
+  end  
+  
+  private #secure input code
   def story_params
     params.require(:story).permit(:name,:link)
   end

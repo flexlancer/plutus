@@ -1,15 +1,38 @@
-<h1>Story Index page</h1>
-<p>Here you will find a forum for discussing life hack's and sustainable living tips.  Please be respectful and mindful of other opinions.  These forums are moderated.</p>
+<h1>Story index</h1>
+<p>Here is a page to create story entries into the DB.  We also list them all on this page.</p>
 <br>
-Random name:link pair from database:
-<%= link_to @story.link, @story.name %>
+Random functionality test [name,link] pair link_to DATABASE:
+<%= link_to @story.name, @story %>
+<br>
+<%# This is added from blog controller for attempts to consolidate functionality %>
+<p id="notice"><%= notice %></p>
+
+<h1>Story List</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Link</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stories.each do |story| %>
+      <tr>
+        <td><%= story.name %></td>
+        <td><%= story.link %></td>
+        <td><%= link_to 'Show', story %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<%= link_to 'New Story', new_story_path %>
 <br>
 <br>
-Random name:link pair with html code: 
+Last refresh at (GMT):  <%= @current_time %>
+<br>
+Random functionality test [name,link] pair ahref HTML: 
 <a href="<%= @story.link %>"><%= @story.name %> </a>
-<br>
-<br>
-<br>
-<br>
-<br>
-Last refresh at (GMT time):  <%= @current_time %>
