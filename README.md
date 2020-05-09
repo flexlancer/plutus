@@ -22,7 +22,4 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
-=======
-# plutus
->>>>>>> 902686ef485f10d4a942c5ecdd3591b64c9951fd
+
