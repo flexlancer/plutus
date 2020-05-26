@@ -12,8 +12,21 @@
   </head>
 
   <body>
+    
     <div id="content">
-      <h1>Custom Application</h1>
+        <div id="login_logout">
+          <% if @current_user %>
+            Logged in as:
+            <%= @current_user.name %>
+            <em><%= link_to "(Logout)", session_path, method:  :delete %></em>
+              <% else %>
+            <em>Not logged in.</em>
+            <%= link_to 'Login', new_session_path %>
+          <% end %>
+        </div>
+    
+    <div id="content">
+      <h1>Collectivation</h1>
          <% unless flash[:notice].blank? %>
          <div id= "notification">
            <%=flash[:notice]%>
@@ -24,3 +37,6 @@
     </div>
   </body>
 </html>
+<%= link_to 'Stories', stories_path %>
+<%= link_to 'Places', places_path %>
+<%= link_to session[:page] %>
