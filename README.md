@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is currently test code in progress.  Please git clone at your own risk.  
 
 Things you may want to cover:
 
@@ -21,5 +19,3 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
-
