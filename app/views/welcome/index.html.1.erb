@@ -12,3 +12,14 @@ Here will be the contents.
 <br>
 <br>
 <%= link_to 'Back', places_path %>
+<%= link_to session[:page] %>
+
+<br>
+<br>
+
+
+Random functionality test [name,link] pair ahref HTML: 
+<a href="<%= @story.link %>"><%= @story.link %> </a>
+<br>
+Random functionality test [name,link] pair link_to DATABASE:
+<%= link_to @story.name, @story %>
