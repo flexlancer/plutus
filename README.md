@@ -2,15 +2,15 @@
 
 This is currently test code in progress.  Please git clone at your own risk.  
 
-Things you may want to cover:
+Dependency List: 
+* ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-linux]
+* Rails 6.0.2.2
+* yarn 1.22.4
+* PostgreSQL
+* Redis server v=4.0.9 sha=00000000:0 malloc=jemalloc-3.6.0 bits=64 build=9435c3c2879311f3
 
-* Ruby version
-
-* System dependencies
-
+Forthcoming: 
 * Configuration
-
-* Database creation
 
 * Database initialization
 
